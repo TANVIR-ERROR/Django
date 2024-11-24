@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is Homepage</h1>
+    <h2>Author:{{author}} </h2>
+    <h2>Age:{{age}} </h2>
+    <h2>{{list}} </h2>
+
+    {% if age >= 18 %}
+        <h4>You are an adult</h4>
+    {% elif age >= 10 and age <= 17 %}
+        <h4>You are a teenager</h4>
+    {% else %}
+        <h4>You are a child</h4>
+    {% endif %}
+    
+    {% for i in courses %}
+    <h4>{{i.id}} {{i.name}} {{i.fee}}</h4>
+    {% endfor %}
+
+    
+   {{list}} 
+  <h1>{{ list | join:" - " }} </h1>
+  <h1> {{ birthday| date:"D d M Y" }}</h1>
+ 
+    
+</body>
+</html>
